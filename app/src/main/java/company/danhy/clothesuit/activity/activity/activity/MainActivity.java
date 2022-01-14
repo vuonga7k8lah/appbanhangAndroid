@@ -271,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getDuLieuSPFlashSale() {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        StringRequest jsonArrayRequest = new StringRequest(Request.Method.GET, "http://192.168.1.12:9021/api-products",
+        StringRequest jsonArrayRequest = new StringRequest(Request.Method.GET, "http://192.168.50.136:9021/api-products",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -330,7 +330,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getDuLieuSPMoiNhat() {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        StringRequest jsonArrayRequest = new StringRequest(Request.Method.GET, "http://192.168.1.14:9021/api-products",
+        StringRequest jsonArrayRequest = new StringRequest(Request.Method.GET, "http://192.168.50.136:9021/api-products",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -385,7 +385,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getDuLieuLoaiSanPham() {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        StringRequest jsonArrayRequest = new StringRequest(Request.Method.GET, "http://192.168.1.14:9021/api-products",
+        StringRequest jsonArrayRequest = new StringRequest(Request.Method.GET, "http://192.168.50.136:9021/api-products",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

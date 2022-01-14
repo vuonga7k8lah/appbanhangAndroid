@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
         if (checkEditText(edtUserName) && checkEditText(edtPassWord)) {
             pDialog.show();
             RequestQueue queue = Volley.newRequestQueue(this);
-            StringRequest requestLogin = new StringRequest(Request.Method.POST, "http://192.168.1.12:9021/api-login",
+            StringRequest requestLogin = new StringRequest(Request.Method.POST, "http://192.168.50.136:9021/api-login",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -110,9 +110,6 @@ public class LoginActivity extends AppCompatActivity {
                                     Account account = new Account();
                                     JSONObject data = jsonObject.getJSONObject("data");
                                     account.setToken(data.getString("token"));
-//                                    account.setUserName(jsonObject.getString("user_name"));
-//                                    account.setEmail(jsonObject.getString("email"));
-//                                    message = jsonObject.getString("msg");
                                     Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
                                     userLocalStore.setUserLoggedIn(true);
                                     //End
